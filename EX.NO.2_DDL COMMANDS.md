@@ -24,48 +24,64 @@ To create a student database and execute DDL queries using SQL.
 ### 1) Create a database studentdb
 
 ### SQL QUERY:
-
+```
+create database studentdbb;
+```
 ### OUTPUT:
+![Screenshot 2024-03-13 110901](https://github.com/Jashwanafathima/DBMS/assets/119560192/a13014c8-7ee2-4270-bef1-88011aa539e7)
+![Screenshot 2024-03-13 110941](https://github.com/Jashwanafathima/DBMS/assets/119560192/8a3a401c-4d82-44bd-8a7a-04c4e9180d59)
 
 ### 2) Create a table student  and insert any two rows with the following fieds RegisterNumber,Name,Age,Address,Phone number
 
 ### SQL QUERY: 
-
+```
+create table student(RegisterNumber int,Name varchar(100),Age int,Address varchar(250),PhoneNumber int) ;
+```
 
 ### OUTPUT:
+![Screenshot 2024-03-13 111253](https://github.com/Jashwanafathima/DBMS/assets/119560192/bd4e7c8d-dc53-4d07-92fc-d3c12fccf5eb)
 
 ### 3) Alter the above student table by adding another attribute department
 
 ### SQL QUERY: 
-
+```
+ alter table student add dept varchar(20);
+```
 ### OUTPUT:
+![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/ade198ea-a1e0-490f-8732-d5d0f116169f)
 
 ### 4) Rename the student table to mystudent
 
 ### SQL QUERY: 
-
-
+```
+rename table student to mystudent;
+```
 
 ### OUTPUT:
+![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/e7f1fd2e-2f43-49b1-b557-35fb4c39b956)
+
 
 ### 5) Delete the mystudent rows using truncate keyword
 
 ### SQL QUERY: 
-
+```
+truncate table mystudent;
+```
 
 ### OUTPUT:
-### 4) Drop the mystudent table
+
+![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/78effdfa-3c00-47cf-a4cd-4eec1d8b6c19)
+
+### 6) Drop the mystudent table
  
 ### SQL QUERY: 
 
-
+```
+drop table mystudent;
+```
 ### OUTPUT:
 
-
-
-
-
-
+![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/86a59dc0-26de-4e22-a7cb-59c3cd3cdcca)
 
 
 ## Result:
