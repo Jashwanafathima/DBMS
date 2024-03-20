@@ -29,8 +29,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### Q1) Update all the records of manager table by increasing 10% of their salary as bonus.
 
 ### QUERY:
-![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/1d6110a7-cf3f-40e6-9705-c3d2060da727)
-
+```
+update manager set salary=salary+(salary*0.10);
+```
 
 ### OUTPUT:
 ![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/7ceb3431-bb37-4564-b9e1-a380e8ed2d8d)
@@ -40,8 +41,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/918f6a80-1a62-41c7-954f-170c91715e64)
-
+```
+delete from manager where salary<2750;
+```
 
 ### OUTPUT:
 
@@ -51,7 +53,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/fdea52bc-318c-44d8-aa60-80f7563c1cc4)
+```
+select ename as "Name",salary*12 as "Annual salary" from manager;
+```
 
 
 ### OUTPUT:
@@ -62,7 +66,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/62fb8ae2-ce25-4134-bf65-b4f2b05c5321)
+```
+select ename from manager where designation='clerk';
+```
 
 
 ### OUTPUT:
@@ -73,7 +79,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/36b14a33-63bb-4607-a48d-6d685706b0f1)
+```
+select ename from manager where designation <> 'manager';
+```
 
 
 
@@ -85,8 +93,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/897c6ca7-e4ec-498f-a370-0b45cea5bcdc)
-
+```
+select ename from manager where commission=0;
+```
 
 ### OUTPUT:
 
@@ -96,8 +105,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-
-![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/5e65ba88-f6ca-4c6d-9d98-9882e667d02d)
+```
+select ename from manager where ename like '%s' or ename like 's%';
+```
 
 ### OUTPUT:
 ![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/3a605463-7b89-43ed-8bde-85c4f4366bd1)
@@ -107,8 +117,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-
-![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/cb1c60e9-6ad6-4c4f-a1b4-aabd9c6ea185)
+```
+select ename,designation as "job",deptno,hiredate from manager order by hiredate asc;
+```
 
 ### OUTPUT:
 
@@ -118,7 +129,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/4e45175f-cdcd-4d79-808f-69e8ad95cef9)
+```
+select * from manager where hiredate<str_to_date('1981-09-30','YYYY-MM-DD');
+```
 
 
 ### OUTPUT:
@@ -129,7 +142,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
-![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/b267c778-c70e-4019-9be3-a21a54a4b75f)
+```
+ select ename,deptno,salary from manager order by deptno asc,salary desc;
+```
 
 
 ### OUTPUT:
@@ -141,8 +156,10 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 
 
 ### QUERY:
+```
+select ename from manager where deptno not in (30,40,10);
+```
 
-![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/9cd3b766-a157-4e64-98ce-1f303d5663dc)
 
 ### OUTPUT:
 
@@ -151,8 +168,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### Q13) Find number of rows in the table EMP
 
 ### QUERY:
-![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/437a867e-50d8-4db9-8597-b7e83f812891)
-
+```
+ select count(*) from manager;
+```
 
 ### OUTPUT:
 ![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/3f9e4787-87b0-4627-a65a-9d205e6239d7)
@@ -161,8 +179,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### Q14) Find maximum, minimum and average salary in EMP table.
 
 ### QUERY:
-
-![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/3d61c412-554f-4f15-9bc6-7e82154631bf)
+```
+select max(salary) as MAX,min(salary) as MIN, avg(salary) as AVG from manager;
+```
 
 ### OUTPUT:
 
@@ -171,8 +190,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### Q15) List the jobs and number of employees in each job. The result should be in the descending order of the number of employees.
 
 ### QUERY:
-![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/59b41d96-ed4b-4193-9e45-f7e6f59d96c5)
-
+```
+SELECT designation AS job, COUNT(*) AS num_employees FROM manager GROUP BY designation ORDER BY num_employees DESC;
+```
 
 ### OUTPUT:
 ![image](https://github.com/Jashwanafathima/DBMS/assets/119560192/3a922720-897e-4108-8d85-42687b2d317e)
